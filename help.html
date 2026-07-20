@@ -1,0 +1,206 @@
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background: #161316;
+    color: #dfe0e7;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+nav .logo {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #5209b3;
+    letter-spacing: 1.5px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+    text-decoration: none;
+}
+
+nav ul li a {
+    color: #0990df;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+nav .btn-group {
+display: flex;
+gap: 16px;
+justify-content: center;
+flex-wrap: wrap;
+}
+
+.btn-primary {
+    background: transparent;
+    color: #3c81c2;
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: 2px solid rgb(92, 154, 206);
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: #e90404bb;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: 2px solid #e90404bb;
+    cursor: pointer;
+}
+
+.btn-outline:hover {
+    transform: translateY(-2px);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0d0e15; /* Fundo escuro gamer */
+    color: #e0e0e6;
+}
+
+.details {
+    max-width: 600px;
+        margin: 40px auto;
+        padding: 20px;
+}
+
+    /* Título com efeito Neon */
+    h2 {
+        color: #00ffcc; /* Ciano Neon */
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+        margin-bottom: 30px;
+    }
+
+    /* Cards de perguntas (Acordeão) */
+    details {
+        background: #181a26; /* Fundo do card */
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        border: 2px solid #2d3142;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    /* Efeito ao passar o mouse por cima (Hover) */
+    details:hover {
+        border-color: #9433ff; /* Roxo Neon */
+        box-shadow: 0 0 15px rgba(148, 51, 255, 0.4);
+        transform: translateY(-2px);
+    }
+
+    /* Quando o item estiver aberto */
+    details[open] {
+        border-color: #00ffcc;
+        box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
+    }
+
+    /* Estilo do texto da Pergunta */
+    summary {
+        font-weight: bold;
+        font-size: 1.1em;
+        color: #ffffff;
+        outline: none;
+        list-style: none; /* Remove a setinha padrão em alguns navegadores */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Adiciona um indicador customizado (ícone [+] ou [x]) */
+    summary::after {
+        content: '🗡️';
+        color: #9433ff;
+        font-size: 0.8em;
+        transition: transform 0.3s;
+    }
+
+    details[open] summary::after {
+        transform: rotate(90deg);
+        color: #00ffcc;
+    }
+
+    /* Estilo do texto da Resposta */
+    p {
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid #2d3142;
+        color: #b3b3cc;
+    }
+
+    /* Destacar links ou textos importantes */
+    strong {
+        color: #00ffcc;
+    }
+</style>
+ 
+ <nav>
+    <div class="logo">Play<span style="color:#17b3e2">On⚔️</span></div>
+    <ul>
+      <li><a href="/jogos.html">Jogos</a></li>
+      <li><a href="/comunidade.html">Comunidade</a></li>
+      <li><a href="#">Help</a></li>
+      <li><a href="/store.html">Store</a></li>
+    </ul>
+    <div class="btn-group">
+      <button class="btn-primary">Registar-se</button>
+      <button class="btn-outline">Entrar</button>
+    </div>
+  </nav>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central de Ajuda</title>
+   
+</head>
+<body>
+
+<div class="details">
+
+    <h2>Central de Ajuda - Perguntas Frequentes</h2>
+
+    <details>
+        <summary>Como posso redefinir minha senha?</summary>
+        <p>Para redefinir sua senha, clique em "Esqueci minha senha" na tela de login. Enviaremos um e-mail com as instruções para criar uma nova senha.</p>
+    </details>
+
+    <details>
+        <summary>Quais são as formas de pagamento aceitas?</summary>
+        <p>Aceitamos cartões de crédito (Visa, MasterCard, Elo), Pix e boleto bancário.</p>
+    </details>
+
+    <details>
+        <summary>Como entro em contato com o suporte?</summary>
+        <p>Você pode enviar um e-mail para <strong>suporte@exemplo.com</strong> ou clicar no ícone de chat no canto inferior direito da tela.</p>
+    </details>
+</div>
+
+</body>

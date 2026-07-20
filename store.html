@@ -1,0 +1,92 @@
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background: #161316;
+    color: #dfe0e7;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+nav .logo {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #5209b3;
+    letter-spacing: 1.5px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+    text-decoration: none;
+}
+
+nav ul li a {
+    color: #0990df;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+nav .btn-group {
+display: flex;
+gap: 16px;
+justify-content: center;
+flex-wrap: wrap;
+}
+
+.btn-primary {
+    background: transparent;
+    color: #3c81c2;
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: 2px solid rgb(92, 154, 206);
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: #e90404bb;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: 2px solid #e90404bb;
+    cursor: pointer;
+}
+
+.btn-outline:hover {
+    transform: translateY(-2px);
+}
+</style>
+ 
+ <nav>
+    <div class="logo">Play<span style="color:#17b3e2">On⚔️</span></div>
+    <ul>
+      <li><a href="/jogos.html">Jogos</a></li>
+      <li><a href="/comunidade.html">Comunidade</a></li>
+      <li><a href="/help.html">Help</a></li>
+      <li><a href="#">Store</a></li>
+    </ul>
+    <div class="btn-group">
+      <button class="btn-primary">Registar-se</button>
+      <button class="btn-outline">Entrar</button>
+    </div>
+  </nav>

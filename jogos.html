@@ -1,0 +1,273 @@
+<nav>
+    <div class="logo">Play<span style="color:#17b3e2">On⚔️</span></div>
+    <ul>
+      <li><a href="#">Jogos</a></li>
+      <li><a href="comunidade.html">Comunidade</a></li>
+      <li><a href="/help.html">Help</a></li>
+      <li><a href="/store.html">Store</a></li>
+    </ul>
+    <div class="btn-group">
+      <button class="btn-primary">Registar-se</button>
+      <button class="btn-outline">Entrar</button>
+    </div>
+  </nav>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorar Jogo</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background: #161316;
+    color: #dfe0e7;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.all {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0d0e15;
+    color: #e0e0e6;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+nav .logo {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #5209b3;
+    letter-spacing: 1.5px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+    text-decoration: none;
+}
+
+nav ul li a {
+    color: #0990df;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+nav .btn-group {
+display: flex;
+gap: 16px;
+justify-content: center;
+flex-wrap: wrap;
+}
+
+.btn-primary {
+    background: transparent;
+    color: #3c81c2;
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: 2px solid rgb(92, 154, 206);
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: #e90404bb;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: 2px solid #e90404bb;
+    cursor: pointer;
+}
+
+.btn-outline:hover {
+    transform: translateY(-2px);
+}
+        /* Reset básico e fundo gamer */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0d0e15;
+            color: #e0e0e6;
+            flex-direction: column;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        /* Título da Seção */
+        .explore-title {
+            font-size: 2.5rem;
+            color: #00ffcc; /* Ciano Neon */
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+        }
+
+        .explore-subtitle {
+            color: #9433ff; /* Roxo Neon */
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+
+        /* Grid dos Mapas/Modos */
+        .explore-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        /* Card de Exploração */
+        .explore-card {
+            background: #181a26;
+            border: 2px solid #2d3142;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Efeito Hover no Card */
+        .explore-card:hover {
+            border-color: #9433ff;
+            box-shadow: 0 0 20px rgba(148, 51, 255, 0.4);
+            transform: translateY(-5px);
+        }
+
+        /* Miniatura/Espaço para Imagem do Mapa */
+        .map-thumb {
+            width: 100%;
+            height: 140px;
+            background: #25283a;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #555870;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: 1px dashed #3d425c;
+        }
+
+        /* Nome do Lugar/Modo */
+        .map-name {
+            font-size: 1.4rem;
+            color: #ffffff;
+            margin: 10px 0;
+            text-transform: uppercase;
+        }
+
+        /* Descrição do local */
+        .map-desc {
+            font-size: 0.9rem;
+            color: #b3b3cc;
+            margin-bottom: 20px;
+            height: 40px; /* Mantém o alinhamento dos botões */
+        }
+
+        /* Botão Iniciar Missão */
+        .launch-btn {
+            width: 100%;
+            padding: 10px;
+            background: transparent;
+            border: 2px solid #00ffcc;
+            color: #00ffcc;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .explore-card:hover .launch-btn {
+            background: #00ffcc;
+            color: #0d0e15;
+            box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+        }
+
+        /* Botão Voltar fixo embaixo */
+        .back-btn {
+            margin-top: 40px;
+            padding: 10px 30px;
+            background: transparent;
+            border: 2px solid #ff3366;
+            color: #ff3366;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: #ff3366;
+            color: #ffffff;
+            box-shadow: 0 0 15px rgba(255, 51, 102, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="all">
+
+    <h1 class="explore-title">Explorar Mundo</h1>
+    <p class="explore-subtitle">Selecione o seu próximo destino</p>
+
+    <div class="explore-grid">
+        
+        <div class="explore-card">
+            <div class="map-thumb">[ MAP_THUMB_01 ]</div>
+            <h2 class="map-name">Distrito Neon</h2>
+            <p class="map-desc">Infiltre-se nas indústrias cibernéticas e domine a rede urbana.</p>
+            <button class="launch-btn">Iniciar</button>
+        </div>
+
+        <div class="explore-card">
+            <div class="map-thumb">[ MAP_THUMB_02 ]</div>
+            <h2 class="map-name">Lixão Tecnológico</h2>
+            <p class="map-desc">Recupere peças raras e sobreviva às gangues de sucateiros.</p>
+            <button class="launch-btn">Iniciar</button>
+        </div>
+
+        <div class="explore-card">
+            <div class="map-thumb">[ MAP_THUMB_03 ]</div>
+            <h2 class="map-name">O Núcleo</h2>
+            <p class="map-desc">Enfronte a inteligência artificial central no coração da cidade.</p>
+            <button class="launch-btn">Iniciar</button>
+        </div>
+
+    </div>
+
+    <button class="back-btn">Voltar ao Menu</button>
+    </div>
+</body>
